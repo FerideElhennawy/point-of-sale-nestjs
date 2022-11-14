@@ -25,7 +25,7 @@ export class CategoriesService {
       console.warn("The category does not exist!");
       return false;
     }
-    await this.CategorysRepository.save({id, ...body});
+    await this.CategorysRepository.save({id: oldItem.id, ...body});
   }
 
   async Create(body: Category){
